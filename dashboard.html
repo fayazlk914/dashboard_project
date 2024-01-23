@@ -1,0 +1,51 @@
+<!-- templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization Dashboard</title>
+    <!-- Add this to the head section of your HTML template -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <h1>Data Visualization Dashboard</h1>
+    <div id="chart-container">
+        <!-- Place your chart visualization code here -->
+        <!-- templates/dashboard.html -->
+<!-- Add this inside the #chart-container div -->
+<canvas id="myChart" width="400" height="400"></canvas>
+
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Label1', 'Label2', 'Label3'],
+            datasets: [{
+                label: 'Data Set',
+                data: [10, 20, 30],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    beginAtZero: true
+                },
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+    </div>
+    <!-- Add interactive features and controls as needed -->
+</body>
+</html>
